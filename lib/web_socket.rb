@@ -341,7 +341,7 @@ class WebSocket
     def gets(rs = $/)
       line = @socket.gets(rs)
       $stderr.printf("recv> %p\n", line) if WebSocket.debug
-      return line
+      return line.to_s
     end
 
     def read(num_bytes)
